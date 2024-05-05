@@ -6,7 +6,7 @@ This project can be run in two methods:
 
 
 ## Running using Docker
-The only requirement in order to run using docker is of course docker awhich can be installed following this [instructions](https://docs.docker.com/engine/install/)
+The only requirement in order to run using docker is of course docker which can be installed following this [instructions](https://docs.docker.com/engine/install/)
 
 git clone this repo
 
