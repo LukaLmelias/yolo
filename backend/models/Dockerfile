@@ -9,8 +9,8 @@ RUN apk add  mongodb yaml-cpp=0.6.2-r2  && rm -vrf /var/cache/apk/*
 
 ENV MONGO_DKR_DATA_DIR '/var/lib/mongodb'
 ENV MONGO_DKR_LOG_DIR '/var/log/mongodb'
-ENV ADD_USER_CMD "${MONGO_DKR_DATA_DIR}/add-user.sh"
-ENV ADD_USER_FILE "${MONGO_DKR_DATA_DIR}/add-mongo-user.js"
+# ENV ADD_USER_CMD "${MONGO_DKR_DATA_DIR}/add-user.sh"
+# ENV ADD_USER_FILE "${MONGO_DKR_DATA_DIR}/add-mongo-user.js"
 ENV MONGO_RUN_PID_FILE '/var/run/mongodb/mongod.pid'
 
 COPY mongod.conf /etc/
@@ -22,6 +22,8 @@ RUN chmod +x /usr/local/bin/start-mongod.sh \
  && chown mongodb:mongodb /run/mongodb \
  && ln -sf /dev/stderr "${MONGO_DKR_LOG_DIR}/mongod.log" \
  && mongo -version
+
+
 
 USER mongodb
 

@@ -1,8 +1,12 @@
-FROM node:lts-alpine3.19
+FROM node:18-alpine
 
 
 WORKDIR /backend/
 
 COPY . .
 
-RUN npm install && npm start
+RUN npm install 
+
+EXPOSE 5000
+
+CMD npm start

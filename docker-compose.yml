@@ -6,14 +6,14 @@ services:
     depends_on:
       - yolo-mongodb-alpine
     ports:
-      -"5000:5000"
+      - "5000:5000"
     networks:
       - yolo-backend-bridge-network
 
   yolo-mongodb-alpine:
-    build: ./backend/models
+    image:  mongodb/mongodb-community-server
     ports:
-      -"27017:27017"
+      - "27017:27017"
     networks:
       - yolo-backend-bridge-network
 
