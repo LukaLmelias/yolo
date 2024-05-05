@@ -5,7 +5,7 @@ This project can be run in two methods:
 -   Manual set-up
 
 
-## Running using Docker
+## Running using Docker:
 The only requirement in order to run using docker is of course docker which can be installed following this [instructions](https://docs.docker.com/engine/install/)
 
 git clone this repo
@@ -29,7 +29,7 @@ $ docker compose up
 
 If everything went well, you should be able to acess the app on:   http://localhost:3000
 
-## Instructions on Manual set-up
+## Instructions on Manual set-up:
 
 ### Requirements
 Make sure that you have the following installed:
