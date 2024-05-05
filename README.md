@@ -20,7 +20,7 @@ Enter into yolo (the created directory)
 $ cd yolo
 ```
 
-Start-up the up using docker compose
+Start-up the app using docker compose
 
 ```
 $ docker compose up 
