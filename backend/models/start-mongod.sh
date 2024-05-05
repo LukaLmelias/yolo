@@ -23,7 +23,7 @@ if [ -f "${ADD_USER_CMD}" ]; then
     rm -v $ADD_USER_CMD
 fi
 
-printf "starting mongod, all interaction with the server will output below:\n" && whoami
+# printf "starting mongod, all interaction with the server will output below:\n" && whoami
 
 # Start the mongo server in the foreground to keep the container running.
 exec mongod --config /etc/mongod.conf
