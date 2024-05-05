@@ -20,6 +20,7 @@ services:
       - yolo-mongodb
     ports:
       - "5000:5000"
+    stdin_open: true
     
     environment:
       - MONGODB_URI=mongodb://yolo-mongodb:27017
@@ -29,11 +30,13 @@ services:
 
   yolo-mongodb:
     image:  mongodb/mongodb-community-server
+    
     restart: always
     volumes:
-      - mongodb:/data/db/var/lib/mongodb
+      - mongodb:/var/lib/mongodb
     ports:
       - "27017:27017"
+    stdin_open: true
     networks:
       - yolo-backend-mongodb-bridge-network
     
