@@ -8,19 +8,21 @@ This project can be run in two methods:
 ## Running using Docker:
 The only requirement in order to run using docker is of course docker which can be installed following this [instructions](https://docs.docker.com/engine/install/)
 
-git clone this repo
+
+Once docker is installed; follow the following steps to start the app
+- git clone this repo
 
 ```
 $ git clone git@github.com:LukaLmelias/yolo.git
 ```
 
-Enter into yolo (the created directory)
+- Enter into yolo (the created directory)
 
 ```
 $ cd yolo
 ```
 
-Start-up the app using docker compose
+- Start-up the app using docker compose
 
 ```
 $ docker compose up 
