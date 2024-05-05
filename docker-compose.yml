@@ -1,25 +1,52 @@
 version: "^3"
 
 services:
+
+  yolo-client:
+    build: ./client
+    restart: always
+    links:
+      - yolo-backend
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    networks:
+      - yolo-client-backend-bridge-network
+
   yolo-backend:
     build: ./backend
+    restart: always
     depends_on:
-      - yolo-mongodb-alpine
+      - yolo-mongodb
     ports:
       - "5000:5000"
+    
+    environment:
+      - MONGODB_URI=mongodb://yolo-mongodb:27017
     networks:
-      - yolo-backend-bridge-network
+      - yolo-backend-mongodb-bridge-network
+      - yolo-client-backend-bridge-network
 
-  yolo-mongodb-alpine:
+  yolo-mongodb:
     image:  mongodb/mongodb-community-server
+    restart: always
+    volumes:
+      - mongodb:/data/db/var/lib/mongodb
     ports:
       - "27017:27017"
     networks:
-      - yolo-backend-bridge-network
+      - yolo-backend-mongodb-bridge-network
+    
 
 networks:
-  yolo-backend-bridge-network:
+  yolo-backend-mongodb-bridge-network:
     driver: bridge
+  yolo-client-backend-bridge-network:
+    driver: bridge
+
+volumes:
+  mongodb:
+
 
 
 

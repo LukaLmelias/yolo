@@ -1,0 +1,12 @@
+node_modules
+package-lock.json
+
+
+# client/public/*
+# client/.gitignore
+# client/README.md
+# client/package-lock.json
+
+# .dockerignore
+# README.md
+# .vscode

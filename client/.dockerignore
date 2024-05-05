@@ -1,0 +1,13 @@
+# backend/node_modules
+# backend/package-lock.json
+
+node_modules
+
+public/*
+.gitignore
+README.md
+package-lock.json
+
+# .dockerignore
+# README.md
+# .vscode
