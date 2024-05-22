@@ -44,6 +44,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "playbook.yml" # Path to your playbook
     ansible.inventory_path = "hosts" # Path to your inventory file
+    
   end
 
   

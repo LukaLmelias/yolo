@@ -1,16 +1,25 @@
 #---
+# update VMs pre step
+- name: Update package cache
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update package cache
+      ansible.builtin.apt:
+        update_cache: yes
+
 - name: Ping all hosts
   hosts: all
   roles:
     - ping_role
 
 
-# # install_docker.yml
-# - name: Install Docker on all hosts
-#   hosts: all
-#   become: yes
-#   # vars_files:
-#   #   - roles/docker_roles/main.yml
-#   roles:
-#     - docker_role
+# install_docker.yml
+- name: Install Docker on all hosts
+  hosts: all
+  become: yes
+  # vars_files:
+  #   - roles/docker_roles/main.yml
+  roles:
+    - docker_role
 
