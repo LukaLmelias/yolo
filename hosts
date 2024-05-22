@@ -1,0 +1,1 @@
+mongodb ansible_host=127.0.01 ansible_port=2222 ansible_user=vagrant ansible_private_key_file=.vagrant/machines/mongodb/virtualbox/private_key
