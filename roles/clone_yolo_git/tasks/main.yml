@@ -1,0 +1,8 @@
+
+# tasks file for clone_yolo_git
+
+- name: clone yolo git repo 
+  ansible.builtin.git:
+    repo: "{{ repo_url }}"
+    dest: "{{ dest_path }}"
+

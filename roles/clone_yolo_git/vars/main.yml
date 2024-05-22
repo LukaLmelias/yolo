@@ -1,0 +1,6 @@
+---
+# vars file for clone_yolo_git
+# defaults/main.yml or vars/main.yml
+
+repo_url: "https://github.com/LukaLmelias/yolo.git"
+dest_path: "/home/vagrant/yolo"

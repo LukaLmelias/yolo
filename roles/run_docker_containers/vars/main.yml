@@ -1,0 +1,8 @@
+
+# vars file for run_docker_containers
+# defaults/main.yml or vars/main.yml
+
+dockerfile_path: "/home/vagrant/yolo/backend/"
+docker_container_name: "yolo_backend"
+docker_ports:
+  - "5000:5000"

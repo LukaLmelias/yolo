@@ -1,0 +1,19 @@
+
+# tasks file for run_docker_containers
+
+- name: Build Docker image from Dockerfile
+  community.docker.docker_image:
+    source: build
+    build:
+      path: "{{ dockerfile_path }}"
+    name: "{{ docker_container_name }}"
+  register: docker_build_result
+
+# - name: Run Docker container
+#   community.docker.docker_container:
+#     name: "{{ docker_container_name }}"
+#     image: "{{ docker_build_result.image.id }}"
+#     state: started
+#     pull: yes
+#     restart_policy: always
+#     ports: "{{ docker_ports }}"
