@@ -33,11 +33,17 @@ Vagrant.configure("2") do |config|
 
 
   #client vm
-  config.vm.define "yolo-client" do |client|
+  config.vm.define "client" do |client|
     #client.vm.box = "geerlingguy/ubuntu2004"
 
   # forwad port for other containers to access
     client.vm.network "forwarded_port", guest: 3000, host: 3000, host_ip: "127.0.0.1"
+  end
+
+  # Ansible provisioner for all hosts
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "playbook.yml" # Path to your playbook
+    ansible.inventory_path = "hosts" # Path to your inventory file
   end
 
   

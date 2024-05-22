@@ -3,3 +3,14 @@
   hosts: all
   roles:
     - ping_role
+
+
+# # install_docker.yml
+# - name: Install Docker on all hosts
+#   hosts: all
+#   become: yes
+#   # vars_files:
+#   #   - roles/docker_roles/main.yml
+#   roles:
+#     - docker_role
+

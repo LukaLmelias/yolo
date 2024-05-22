@@ -1,0 +1,7 @@
+
+# tasks file for docker_role
+# install docker on all vms
+
+- name: Install docker on all hosts
+  include_role:
+    name: geerlingguy.docker
