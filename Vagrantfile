@@ -9,7 +9,10 @@ Vagrant.configure("2") do |config|
   
   #define the OS for all the vms
   config.vm.box = "geerlingguy/ubuntu2004"
+  #disable key checks
+  #config.ssh.insert_key = false
   
+
   #mongo db vm
   config.vm.define "mongodb" do |mongodb|
 
