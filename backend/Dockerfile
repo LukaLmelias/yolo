@@ -6,7 +6,10 @@ ENV MONGODB_URI="mongodb://yolo-mongodb:27017"
 
 COPY ./package.json .
 
-RUN npm install && curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.2/install.sh | bash && nvm install 18.18.0
+#RUN apk update && apk upgrade && apk add curl
+
+RUN npm install 
+#&& curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.2/install.sh | bash && nvm install 18.18.0
 
 COPY . .
 

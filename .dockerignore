@@ -3,7 +3,10 @@ backend/package-lock.json
 
 client/node_modules
 
-client/public/*
+client/public/*.ico
+client/public/*.png
+client/public/*.txt
+client/public/*.json
 client/.gitignore
 client/README.md
 client/package-lock.json
