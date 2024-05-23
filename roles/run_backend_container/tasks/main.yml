@@ -1,12 +1,12 @@
-
-# task file for run_mongodb_container
-- name: Pull MongoDB Docker image
+---
+# tasks file for run_backend_container
+- name: Pull backend Docker image
   docker_image:
     name: "{{ docker_image_name }}"
     tag: "{{ docker_image_tag }}"
     source: pull
 
-- name: Run MongoDB container
+- name: Run backend container
   docker_container:
     name: "{{ container_name }}"
     image: "{{ docker_image_name }}:{{ docker_image_tag }}"

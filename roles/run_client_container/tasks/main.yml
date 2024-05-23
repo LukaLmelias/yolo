@@ -1,16 +1,16 @@
-
-# task file for run_mongodb_container
-- name: Pull MongoDB Docker image
-  docker_image:
+---
+# tasks file for run_client_container
+- name: Pull client Docker image
+  community.docker.docker_image:
     name: "{{ docker_image_name }}"
     tag: "{{ docker_image_tag }}"
     source: pull
 
-- name: Run MongoDB container
-  docker_container:
+- name: Run client container
+  community.docker.docker_container:
     name: "{{ container_name }}"
     image: "{{ docker_image_name }}:{{ docker_image_tag }}"
     state: started
     restart_policy: always
     ports: "{{ container_ports }}"
-    volumes: "{{ container_volumes }}"
+    #stdin_open: true

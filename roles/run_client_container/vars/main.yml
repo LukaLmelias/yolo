@@ -1,0 +1,9 @@
+---
+# vars file for run_client_container
+docker_image_name: "lukalmelias/yolo_client"
+docker_image_tag: "0.1.0"
+container_name: "yolo_client"
+container_ports:
+  - "3000:3000"
+# container_volumes:
+#   - "/var/lib/mongodb:/var/lib/mongodb"

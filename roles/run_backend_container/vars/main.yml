@@ -1,0 +1,9 @@
+---
+# vars file for run_backend_container
+docker_image_name: "lukalmelias/yolo_backend"
+docker_image_tag: "0.1.0"
+container_name: "yolo_backend"
+container_ports:
+  - "5000:5000"
+container_volumes:
+  - "/var/lib/mongodb:/var/lib/mongodb"
