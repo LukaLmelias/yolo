@@ -32,7 +32,7 @@ services:
       - yolo-client-backend-bridge-network
 
   yolo-mongodb:
-    image:  mongodb/mongodb-community-server
+    image:  lukalmelias/yolo_mongodb:0.1.0
     
     restart: always
     volumes:
