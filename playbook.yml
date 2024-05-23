@@ -23,3 +23,18 @@
   roles:
     - docker_role
 
+
+# clone yolo
+- name: Clone yolo git repo
+  hosts: all
+  become: yes
+  roles:
+    - clone_yolo_git
+
+
+# pull and run mongodb container
+- name: pull and run mongodb container
+  hosts: mongodb
+  become: yes
+  roles:
+    - run_mongodb_container
