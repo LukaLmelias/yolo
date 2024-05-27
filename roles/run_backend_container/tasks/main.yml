@@ -11,6 +11,6 @@
     name: "{{ container_name }}"
     image: "{{ docker_image_name }}:{{ docker_image_tag }}"
     state: started
-    restart_policy: always
+    restart_policy: on-failure
     ports: "{{ container_ports }}"
     volumes: "{{ container_volumes }}"
