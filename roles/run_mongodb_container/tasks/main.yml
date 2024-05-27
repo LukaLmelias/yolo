@@ -14,3 +14,4 @@
     restart_policy: on-failure
     ports: "{{ container_ports }}"
     volumes: "{{ container_volumes }}"
+    tty: true
