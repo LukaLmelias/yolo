@@ -13,7 +13,7 @@ Once docker is installed; follow the following steps to start the app
 - 1 git clone this repo
 
 ```
-git clone git@github.com:LukaLmelias/yolo.git
+git clone https://github.com/LukaLmelias/yolo.git
 ```
 
 - 2 Enter into yolo (the created directory)
