@@ -40,12 +40,6 @@
     - run_mongodb_container
 
 
-# pull and run client container
-- name: pull and run client container
-  hosts: client
-  become: yes
-  roles:
-    - run_client_container
 
 # pull and run backend container
 - name: pull and run backend container
@@ -53,4 +47,13 @@
   become: yes
   roles:
     - run_backend_container
+
+
+
+# pull and run client container
+- name: pull and run client container
+  hosts: client
+  become: yes
+  roles:
+    - run_client_container
 
