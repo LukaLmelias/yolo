@@ -2,7 +2,7 @@
 # vars file for run_mongodb_container
 
 docker_image_name: "lukalmelias/yolo_mongodb"
-docker_image_tag: "0.1.0"
+docker_image_tag: "0.1.1"
 container_name: "yolo_mongodb"
 container_ports:
   - "27017:27017"
