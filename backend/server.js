@@ -13,7 +13,7 @@ let dbName = 'yolomy';
 // define a url to connect to the database
 //const MONGODB_URI = process.env.MONGODB_URI || mongodb_url + dbName
 
-const MONGODB_URI = 'http://localhost:27017'
+const MONGODB_URI = 'mongodb://localhost/'
 mongoose.connect(MONGODB_URI,{useNewUrlParser: true, useUnifiedTopology: true  } )
 let db = mongoose.connection;
 
