@@ -70,3 +70,12 @@ This is an explanation of the rationale behind Docker Compose configuration in s
 `mongodb`: (path is left at default docker volumes)
 
 - Defines a Docker volume to persist MongoDB data, ensuring that data is not lost when containers are stopped or removed.
+
+
+![image](https://github.com/LukaLmelias/yolo/assets/71344715/5a323057-e037-400a-864e-05ef38b9f8da)
+
+
+## Example tagged images
+
+![image](https://github.com/LukaLmelias/yolo/assets/71344715/d49ea02c-3cae-4811-93aa-09a73a27c31f)
+
