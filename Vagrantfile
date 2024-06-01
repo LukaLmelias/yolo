@@ -11,15 +11,17 @@ Vagrant.configure("2") do |config|
   config.vm.box = "geerlingguy/ubuntu2004"
   #disable key checks
   #config.ssh.insert_key = false
+
+  
   
 
   #mongo db vm
   config.vm.define "mongodb" do |mongodb|
 
-    #mongodb.vm.box = "geerlingguy/ubuntu2004"
+    
 
   # forwad port for other containers to access
-    mongodb.vm.network "forwarded_port", guest: 27017, host: 27017#, host_ip: "127.0.0.1"
+    mongodb.vm.network "forwarded_port", guest: 27017, host: 27017, host_ip: "127.0.0.1"
   end
 
 
@@ -28,7 +30,7 @@ Vagrant.configure("2") do |config|
     #backend.vm.box = "geerlingguy/ubuntu2004"
 
   # forwad port for other containers to access
-    backend.vm.network "forwarded_port", guest: 5000, host: 5000#, host_ip: "127.0.0.1"
+    backend.vm.network "forwarded_port", guest: 5000, host: 5000, host_ip: "127.0.0.1"
   end
 
 
@@ -37,7 +39,7 @@ Vagrant.configure("2") do |config|
     #client.vm.box = "geerlingguy/ubuntu2004"
 
   # forwad port for other containers to access
-    client.vm.network "forwarded_port", guest: 3000, host: 3000#, host_ip: "127.0.0.1"
+    client.vm.network "forwarded_port", guest: 3000, host: 3000, host_ip: "127.0.0.1"
   end
 
   # Ansible provisioner for all hosts
