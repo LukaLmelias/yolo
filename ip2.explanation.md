@@ -77,5 +77,7 @@ This is an explanation of the rationale behind Docker Compose configuration in s
 
 ## Example tagged images
 
+
+
 ![image](https://github.com/LukaLmelias/yolo/assets/71344715/d49ea02c-3cae-4811-93aa-09a73a27c31f)
 
