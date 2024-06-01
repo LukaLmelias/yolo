@@ -6,12 +6,17 @@
     tag: "{{ docker_image_tag }}"
     source: pull
 
+# create a docker volume
+- name: Create Docker volume
+  docker_volume:
+    name: "{{ container_volume }}"
+
 - name: Run MongoDB container
   docker_container:
     name: "{{ container_name }}"
     image: "{{ docker_image_name }}:{{ docker_image_tag }}"
     state: started
-    restart_policy: always
+    restart_policy: on-failure
     ports: "{{ container_ports }}"
-    volumes: "{{ container_volumes }}"
+    volumes: "{{ container_volume }}:/var/lib/mongodb"
     tty: true

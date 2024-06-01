@@ -5,5 +5,7 @@ docker_image_tag: "0.1.0"
 container_name: "yolo_backend"
 container_ports:
   - "5000:5000"
-container_volumes:
-  - "/var/lib/mongodb:/var/lib/mongodb"
+
+container_volume: "mongodb"
+  
+

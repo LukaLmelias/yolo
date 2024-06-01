@@ -13,5 +13,5 @@
     state: started
     restart_policy: on-failure
     ports: "{{ container_ports }}"
-    volumes: "{{ container_volumes }}"
+    volumes: "{{ container_volume }}:/var/lib/mongodb"
     tty: true

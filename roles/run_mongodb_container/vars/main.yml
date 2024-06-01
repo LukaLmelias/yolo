@@ -6,5 +6,4 @@ docker_image_tag: "0.1.1"
 container_name: "mongodb"
 container_ports:
   - "27017:27017"
-container_volumes:
-  - "/var/lib/mongodb:/var/lib/mongodb"
+container_volume: "mongodb"
