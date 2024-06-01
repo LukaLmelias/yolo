@@ -3,7 +3,7 @@ This setup uses Vagrant to create and configure three VMs, each running a part o
 
 
 
-Getting these VMs to communicate was quite a hustle, although the app runs and is accessible from the localhosts port 3000, it appears that the backend VM is not writing data on the mongodb. Both Mongodb and the backend vm connect but for some reason data is not exchanged. I am suspecting either an issue with how i am configuring the docker volumes or the networks. Below is a rationale of my approach in setting the vms, details can be foun at /Vagrant File
+Getting these VMs to communicate was quite a hustle, although the app runs and is accessible from the localhosts port 3000, it appears that the backend VM is not writing data on the mongodb. Both Mongodb and the backend vm connect but for some reason data is not exchanged (when you try to add a product, the page just goes blank and refreshing leads to homepage without any product added). I am suspecting either an issue with how i am configuring the docker volumes or the networks. For now i will stop chasing this bug, an easy fix is to use a single vm running the 3 containers but then I will miss the point of ansible. So for the sake of playing around with ansible, this state remains.  Below is a rationale of my approach in setting the vms, details can be foun at /Vagrant File
 
 - `Base OS`: Using geerlingguy/ubuntu2004 ensures a consistent environment across all VMs.
   
