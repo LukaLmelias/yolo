@@ -34,6 +34,10 @@ This is an explanation of the rationale behind Docker Compose configuration in s
 
 - `ports`: Maps port 5000 on the host machine to port 5000 inside the container, enabling access to the backend service.
 
+## Resulting images were published at my dockerhub registry (public mode)
+
+
+
 - `volumes`: Mounts a Docker volume named mongodb at /var/lib/mongodb to persist MongoDB data.
 
 - `environment`: Sets the environment variable MONGODB_URI to the MongoDB connection string.
