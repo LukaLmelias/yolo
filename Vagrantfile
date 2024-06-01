@@ -18,8 +18,8 @@ Vagrant.configure("2") do |config|
   #mongo db vm
   config.vm.define "mongodb" do |mongodb|
 
-    
-
+    mongodb.vm.hostname = "mongodb" # just to be sure of the vmname
+    mongodb.vm.network "private_network", ip: "192.168.56.10"
   # forwad port for other containers to access
     mongodb.vm.network "forwarded_port", guest: 27017, host: 27017, host_ip: "127.0.0.1"
   end
@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
   #backend vm
   config.vm.define "backend" do |backend|
     #backend.vm.box = "geerlingguy/ubuntu2004"
-
+    backend.vm.network "private_network", ip: "192.168.56.20"
   # forwad port for other containers to access
     backend.vm.network "forwarded_port", guest: 5000, host: 5000, host_ip: "127.0.0.1"
   end
@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
   #client vm
   config.vm.define "client" do |client|
     #client.vm.box = "geerlingguy/ubuntu2004"
-
+    client.vm.network "private_network", ip: "192.168.56.30"
   # forwad port for other containers to access
     client.vm.network "forwarded_port", guest: 3000, host: 3000, host_ip: "127.0.0.1"
   end

@@ -34,7 +34,7 @@
 
 # pull and run mongodb container
 - name: pull and run mongodb container
-  hosts: mongodb
+  hosts: yolo.mongodb
   become: yes
   roles:
     - run_mongodb_container

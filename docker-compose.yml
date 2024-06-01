@@ -17,7 +17,7 @@ services:
     build: ./backend
     restart: always
     depends_on:
-      - yolo-mongodb
+      - mongodb
     ports:
       - "5000:5000"
     stdin_open: true
@@ -26,12 +26,12 @@ services:
 
     
     environment:
-      - MONGODB_URI=mongodb://yolo-mongodb:27017
+      - MONGODB_URI=mongodb://mongodb:27017
     networks:
       - yolo-backend-mongodb-bridge-network
       - yolo-client-backend-bridge-network
 
-  yolo-mongodb:
+  mongodb:
     image:  lukalmelias/yolo_mongodb:0.1.0
     
     restart: always

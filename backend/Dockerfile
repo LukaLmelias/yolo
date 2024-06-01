@@ -2,7 +2,7 @@ FROM node:13-alpine
 
 
 WORKDIR /backend
-ENV MONGODB_URI="mongodb://yolo-mongodb:27017"
+ENV MONGODB_URI="mongodb://mongodb:27017"
 
 COPY ./package.json .
 
