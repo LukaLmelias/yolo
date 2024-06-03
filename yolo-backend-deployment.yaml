@@ -25,7 +25,7 @@ spec:
         volumeMounts:
         - name: mongodb-storage
           mountPath: /var/lib/mongodb
-      volumes:
+      volumes: # this is not really necessary; i think only the db that needs pvc volume
       - name: mongodb-storage
         persistentVolumeClaim:
           claimName: mongodb-pvc
