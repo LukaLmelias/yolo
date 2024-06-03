@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yolo-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yolo-backend
+  template:
+    metadata:
+      labels:
+        app: yolo-backend
+    spec:
+      containers:
+      - name: yolo-backend
+        image: lukalmelias/yolo_backend:0.1.0
+        ports:
+        - containerPort: 5000
+        stdin: true
+        tty: true
+        env:
+        - name: MONGODB_URI
+          value: "mongodb://mongodb:27017"
+        volumeMounts:
+        - name: mongodb-storage
+          mountPath: /var/lib/mongodb
+      volumes:
+      - name: mongodb-storage
+        persistentVolumeClaim:
+          claimName: mongodb-pvc
